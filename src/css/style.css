@@ -1,0 +1,24 @@
+/*
+ * Main stylesheet for 3D Solar System Explorer.
+ * Defines layout and appearance for canvas and joystick container.
+ */
+
+body {
+  margin: 0;
+  overflow: hidden; /* Hide scrollbars when scene moves */
+  background-color: #000; /* Dark background for space */
+}
+
+canvas {
+  display: block; /* Remove default inline-block spacing */
+}
+
+#joystick-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 120px;
+  height: 120px;
+  /* Higher z-index to appear above canvas */
+  z-index: 10;
+}
