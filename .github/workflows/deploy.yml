@@ -27,7 +27,7 @@ jobs:
         run: |
           rm -rf dist
           mkdir -p dist
-          cp -r src/* dist4
+          cp -r src/* dist/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
