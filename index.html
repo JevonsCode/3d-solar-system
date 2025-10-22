@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>3D Solar System Explorer</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r141/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.9.0/nipplejs.min.js"></script>
-</head>
-<body>
-  <div id="joystick-container"></div>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Solar System</title>
+    <!--
+      Simple 3D solar system built with Three.js.  All of the heavy lifting
+      happens in the accompanying main.js module.  To publish this site to
+      GitHub Pages simply push the contents of this folder to a repository and
+      enable pages on the main branch.
+    -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+      #info {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: #fff;
+        font-family: sans-serif;
+        z-index: 1;
+        font-size: 1rem;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info">3D Solar System – drag to orbit, scroll to zoom</div>
+    <!-- Use ES module script to load our JavaScript.  Three.js is pulled from a CDN. -->
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
